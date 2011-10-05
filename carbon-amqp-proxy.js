@@ -1,4 +1,3 @@
-
 var configFile = './config.js';
 var config = {};
 
@@ -23,9 +22,9 @@ var server = net.createServer(function (s) {
       if (d.match(/^$/)) {
         continue;
       }
-      if (d.match(/^[a-zA-Z\._]+ \d*\.?\d* \d+\s*$/)) {
+      if (d.match(/^[a-zA-Z0-9\-\._]+ \d*\.?\d* \d+\s*$/)) {
         payload += d + "\n";
-      } else if (d.match(/^[a-zA-Z\._]+ \d*\.?\d*\s*$/)) {
+      } else if (d.match(/^[a-zA-Z0-9\-\._]+ \d*\.?\d*\s*$/)) {
         ts = Math.round(new Date().getTime() / 1000);
         payload += d + " " + ts + "\n";
       } else {
