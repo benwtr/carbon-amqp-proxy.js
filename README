@@ -1,0 +1,8 @@
+A very simple graphite to amqp proxy for node.js
+
+Requires the node-amqp module. "npm install amqp" or http://github.com/postwait/node-amqp
+
+Can be used as an alternative to the graphite local proxy http://www.mail-archive.com/graphite-dev@lists.launchpad.net/msg00411.html
+
+Typically this accepts graphite metric strings on tcp port 2003 from applications that would normally connect directly to carbon, then publishes them to an amqp exchange that carbon should be subscribed to.
+
